@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>services</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
+.w3-bar-block .w3-bar-item {padding:20px}
+
+.fixed-size-img {
+  width: 100%;
+  height: 300px; /* Set the desired height */
+  object-fit: cover; /* Ensure the image covers the area while maintaining aspect ratio */
+
+}
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+  background-image: url('/img/s4.jpg');
+  min-height: 100%;
+}
+
+/* Second image (Portfolio) */
+.bgimg-2 {
+  background-image: url("/img/s2.webp");
+  min-height: 400px;
+}
+
+/* Third image (Contact) */
+.bgimg-3 {
+  background-image: url("/img/s3.jpg");
+  min-height: 400px;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1600px) {
+  .bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: scroll;
+    min-height: 400px;
+  }
+}
+</style>
+</head>
+<body>
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <a href="index.html" class="w3-bar-item w3-button">Home</a>
+    <a href="about.html" class="w3-bar-item w3-button w3-hide-small">About</a>
+    <a href="services.html" class="w3-bar-item w3-button w3-hide-small">services</a>
+    <a href="portfolio.html" class="w3-bar-item w3-button w3-hide-small"> Portfolio</a>
+    <a href="contact.html" class="w3-bar-item w3-button w3-hide-small"> Contact</a>
+
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+    <a href="about.html" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+    <a href="portfolio.html" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
+    <a href="contact.html" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+  </div>
+</div>
+
+<!-- First Parallax Image with Logo Text -->
+<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+    <div class="w3-display-middle" style="white-space:nowrap;">
+      <img src="/img/logo.png" alt="Logo" class="w3-center w3-padding-large  w3-xlarge w3-wide w3-animate-opacit">
+    </div>
+  </div>
+  
+
+  
+<!-- !PAGE CONTENT! -->
+<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+
+    <!-- First Photo Grid-->
+    <div class="w3-row-padding w3-padding-16 w3-center" id="">
+      <div class="w3-quarter">
+        <img src="/img/polish.jpg" alt="Polishing" class="fixed-size-img">
+        <h3>Polishing</h3>
+        <p>Our expert polishing services ensure your surfaces shine like new.</p>
+      </div>
+      <div class="w3-quarter">
+        <img src="/img/proofing.jpg" alt="Waterproofing" class="fixed-size-img">
+        <h3>Waterproofing</h3>
+        <p>Protect your home with our reliable waterproofing solutions.</p>
+      </div>
+      <div class="w3-quarter">
+        <img src="/img/wallpaper.jpg" alt="Wallpaper" class="fixed-size-img">
+        <h3>Wallpaper</h3>
+        <p>Enhance your walls with our stunning wallpaper designs.</p>
+      </div>
+      <div class="w3-quarter">
+        <img src="/img/interior.jpg" alt="Interior Design" class="fixed-size-img">
+        <h3>Interior Design</h3>
+        <p>Transform your space with our creative interior design services.</p>
+      </div>
+    </div>
+    
+    <!-- Second Photo Grid-->
+    <div class="w3-row-padding w3-padding-16 w3-center">
+      <div class="w3-quarter">
+        <img src="/img/plumbing.jpg" alt="Plumbing" class="fixed-size-img">
+        <h3>Plumbing</h3>
+        <p>Reliable plumbing services to ensure your systems run smoothly.</p>
+      </div>
+      <div class="w3-quarter">
+        <img src="/img/paint.jpg" alt="Painting" class="fixed-size-img">
+        <h3>Painting</h3>
+        <p>Professional painting services for a fresh, new look.</p>
+      </div>
+      <div class="w3-quarter">
+        <img src="/img/3d.jpg" alt="3D Visualization" class="fixed-size-img">
+        <h3>3D Visualization</h3>
+        <p>See your project come to life with our 3D visualization services.</p>
+      </div>
+      <div class="w3-quarter">
+        <img src="/img/floor.jpg" alt="Flooring" class="fixed-size-img">
+        <h3>Flooring</h3>
+        <p>High-quality flooring solutions for every room.</p>
+      </div>
+    </div>
+  
+    <!-- Additional Photo Grid-->
+    <div class="w3-row-padding w3-padding-16 w3-center">
+      <div class="w3-quarter">
+        <img src="/img/curtain.jpeg" alt="Curtains & Blinds" class="fixed-size-img">
+        <h3>Curtains & Blinds</h3>
+        <p>Stylish curtains and blinds to complement your decor.</p>
+      </div>
+      <div class="w3-quarter">
+        <img src="/img/celling.jpeg" alt="Ceiling" class="fixed-size-img">
+        <h3>Ceiling</h3>
+        <p>Innovative ceiling solutions to enhance your interior.</p>
+      </div>
+      <div class="w3-quarter">
+        <img src="/img/partion.jpg" alt="Partition" class="fixed-size-img">
+        <h3>Partition</h3>
+        <p>Functional partition solutions for optimized space usage.</p>
+      </div>
+      <div class="w3-quarter">
+        <img src="/img/fur.webp" alt="Furniture" class="fixed-size-img">
+        <h3>Furniture</h3>
+        <p>Custom furniture to match your unique style.</p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64">
+    <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+    <div class="w3-xlarge w3-section">
+      <i class="fa fa-facebook-official w3-hover-opacity"></i>
+      <i class="fa fa-instagram w3-hover-opacity"></i>
+      <i class="fa fa-snapchat w3-hover-opacity"></i>
+      <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+      <i class="fa fa-twitter w3-hover-opacity"></i>
+      <i class="fa fa-linkedin w3-hover-opacity"></i>
+    </div>
+  </footer>
+<!-- End page content -->
+</div>
+
+</body>
+</html>

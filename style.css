@@ -1,0 +1,344 @@
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color: #0c0c0c;
+}
+
+/* Navbar styling */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+}
+
+/* Transparent navbar style */
+.navbar.transparent {
+    background-color: transparent;
+}
+
+/* Non-transparent navbar style (when not in home section) */
+.navbar.scrolled {
+    background-color: #0c0c0c;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+    display: flex;
+    padding-bottom: 0; /* Remove bottom padding */
+}
+
+/* Slideshow images */
+.mySlides {
+    min-width: 100%;
+    transition: transform 1s ease;
+}
+.mt-5 {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+/* Full-width images */
+.mySlides img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+   
+    z-index: 20;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+.dot-container {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    z-index: 20;
+    padding-bottom: 0; /* Remove bottom padding */
+}
+/* Media query for mobile view */
+@media (max-width: 768px) {
+    .slideshow-container {
+        height: 50vh; /* Half the viewport height */
+    }
+    
+    .navbar-brand img {
+        width: 100px; /* Adjust logo size for mobile */
+        margin-top: -10px;
+    }
+    
+    .nav-link {
+        padding: 0.5rem 1rem; /* Adjust padding for mobile */
+    }
+}
+/* service section*/
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+    padding: 0 30px 30px;
+}
+
+.service-card {
+    position: relative;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    height: 150px;
+}
+
+.service-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.service-card .card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0); /* Initially transparent background */
+    color: #ffffff;
+    transition: background 0.3s ease;
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.service-card:hover .card-content {
+    background: rgba(0, 0, 0, 0.6); /* Background color on hover */
+}
+
+.service-card h3 {
+    font-size: 30px;
+    margin: 0;
+}
+
+@media (max-width: 992px) {
+    .services-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .services-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.service-card p {
+    font-size: 14px;
+}
+
+.service-card.large-1 {
+    grid-column: 1 / 3;
+    grid-row: 2 / 4; /* Adjusted row for large card 1 */
+    height: 300px; /* Specific height for large cards */
+}
+
+.service-card.large-2 {
+    grid-column: 2 / 4;
+    grid-row: 4 / 6; /* Adjusted row for large card 2 */
+    height: 300px; /* Specific height for large cards */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1200px) {
+    .services-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .service-card.large-1 {
+        grid-column: 1 / 3;
+        grid-row: auto;
+        height: 300px; /* Set specific height for smaller screens */
+    }
+
+    .service-card.large-2 {
+        grid-column: 1 / 3;
+        grid-row: auto;
+        height: 300px; /* Set specific height for smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .services-container {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card.large-1,
+    .service-card.large-2 {
+        grid-column: auto;
+        grid-row: auto;
+        height: 300px; /* Set specific height for smallest screens */
+    }
+}
+.container {
+    margin-top: 0; /* Remove default top margin */
+}
+
+
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 1000;
+    cursor: pointer;
+    user-select: none; /* Prevent text selection while dragging */
+    touch-action: none;
+}
+
+
+.whatsapp-float img {
+    margin-top: 10px;
+    width: 40px;
+    height: 40px;
+}
+
+/* slide text*/
+.hero {
+    position: absolute;
+    top: 50%;
+    left: 33%;
+    transform: translate(-50%, -50%);
+    z-index: 1000; /* Ensure it's above the slideshow */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.hero-description {
+    text-align: left;
+    position: relative;
+    max-width: 800px; /* Set maximum width as needed */
+    margin: auto;
+    padding: 0 20px;
+}
+
+.hero-header {
+    font-size: 50px;
+    color: #ffffff;
+}
+
+.hero-text {
+    margin-top: 20px;
+    color: #ffffff;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    border: none;
+    color: #000;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+    .hero-header {
+        font-size: 45px;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-header {
+        font-size: 40px;
+    }
+
+    .hero-text p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-header {
+        font-size: 35px;
+    }
+
+    .hero-text p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-header {
+        font-size: 30px;
+    }
+
+    .hero-text p {
+        font-size: 14px;
+    }
+}
+
+/* Happy Customers Section */
